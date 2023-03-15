@@ -22,7 +22,11 @@ public class Player : MonoBehaviour
         HealthChanged?.Invoke(_health);
 
         if (_health <= 0)
-            Die();
+        {
+
+            Invoke("Die", 1);
+        }
+            
     }
 
     public void Die()
